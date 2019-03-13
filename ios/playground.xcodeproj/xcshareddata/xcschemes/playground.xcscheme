@@ -78,7 +78,7 @@
                BlueprintIdentifier = "7B49FEBA1E95090800DEB3EA"
                BuildableName = "ReactNativeNavigationTests.xctest"
                BlueprintName = "ReactNativeNavigationTests"
-               ReferencedContainer = "container:../../lib/ios/ReactNativeNavigation.xcodeproj">
+               ReferencedContainer = "container:../node_modules/react-native-navigation/lib/ios/ReactNativeNavigation.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

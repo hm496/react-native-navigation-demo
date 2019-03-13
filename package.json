@@ -1,0 +1,57 @@
+{
+  "name": "awesomeproject",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug --info",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/react": "16.x.x",
+    "@types/react-native": "0.57.7",
+    "react": "16.6.1",
+    "react-native": "0.57.7",
+    "react-native-navigation": "^2.13.1",
+    "react-native-ui-lib": "^3.20.1",
+    "react-native-view-overflow": "0.0.3",
+    "react-redux": "5.x.x",
+    "redux": "3.x.x"
+  },
+  "devDependencies": {
+    "@types/jest": "23.x.x",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "24.3.1",
+    "jest": "24.3.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    },
+    "roots": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib/dist/",
+      "<rootDir>/integration/"
+    ],
+    "collectCoverageFrom": [
+      "lib/dist/**/*.js",
+      "integration/**/*.js",
+      "!lib/dist/index.js",
+      "!lib/dist/Navigation.js",
+      "!lib/dist/adapters/**/*",
+      "!lib/dist/interfaces/**/*",
+      "!lib/dist/**/*.test.*",
+      "!integration/**/*.test.*",
+      "!integration/*.test.*"
+    ],
+    "resetMocks": true,
+    "resetModules": true,
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "html"
+    ]
+  }
+}
